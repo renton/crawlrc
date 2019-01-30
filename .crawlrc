@@ -1,0 +1,125 @@
+# === autotravel ===
+travel_delay        = 2
+explore_delay       = -1
+rest_delay          = -1
+rest_wait_both      = true
+show_travel_trail   = true
+
+travel_avoid_terrain    = deep water
+stop                    = Your transformation is almost over.
+
+explore_improved   = true
+explore_greedy     = true
+explore_stop       = greedy_sacrificeable,items,greedy_pickup,greedy_visited_item_stack,stairs,shops,altars,gates
+explore_wall_bias  = 3
+
+# === chunks ===
+confirm_butcher         = never
+auto_eat_chunks         = true
+auto_drop_chunks        = yes
+easy_eat_chunks         = true
+easy_eat_contaminated   = true
+easy_eat_gourmand       = true
+auto_drop_chunks        = rotten
+auto_sacrifice          = true
+prefer_safe_chunks      = true
+
+# === ui ===
+pickup_mode                 = multi
+drop_mode                   = multi
+restart_after_game          = true
+level_map_cursor_step       = 4
+hp_colour                   = 70:yellow, 50:red
+sort_menus                  = inv: true : equipped, identified, basename, qualname, charged
+note_monsters               += orb of fire, ancient lich, Sigmund
+detected_monster_colour     = lightred
+detected_item_colour        = green
+remembered_monster_colour   = darkgrey
+level_map_title             = true
+easy_exit_menu              = true
+
+tile_font_crt_family  = Lucida Console
+tile_font_stat_family = Lucida Console
+tile_font_msg_family  = Lucida Console
+tile_font_lbl_family  = Lucida Console
+
+# === logging ===
+show_more           = false
+user_note_prefix    = --
+easy_confirm        = all
+hp_warning          = 25
+
+note_hp_percent     = 10
+note_chat_message   = true
+
+# === autofight ===
+autofight_stop      = 75
+autofight_wait      = true
+#autofight_caught   = true
+
+# === skills ===
+default_manual_training = true
+default_show_all_skills = true
+
+##############################################
+# Events which enforce the more message prompt
+# from https://underhound.eu/crawl/rcfiles/crawl-git/Tedronai.rc
+##############################################
+#force_more_message += .*comes into view.*wielding.*runed
+#force_more_message += .*comes into view.*wielding.*glowing
+force_more_message += (starving|devoid of blood)
+force_more_message += A sentinel's mark forms upon you
+force_more_message += You feel less protected from missiles
+force_more_message += Ouch! That really hurt!
+force_more_message += Space bends around you
+force_more_message += Space warps.*around you
+force_more_message += The mighty Pandemonium lord .* resides here
+force_more_message += You are starting to lose your buoyancy
+force_more_message += You feel yourself come back to life
+force_more_message += You have finished your manual of
+force_more_message += You lose control over your flight
+force_more_message += Your icy armour evaporates
+force_more_message += You start to feel a little slower
+force_more_message += calcifying dust hits
+force_more_message += caustic.* comes? into view
+force_more_message += curse toe.*comes? into view
+force_more_message += Deactivating autopickup
+force_more_message += hits you.*distortion
+force_more_message += lose consciousness
+force_more_message += watched by something
+force_more_message += is wielding.*chaos
+force_more_message += is wielding.*distortion
+force_more_message += is wielding.*electrocution
+force_more_message += is wielding.*venom
+force_more_message += Your.*skill increases to level 5
+force_more_message += Your.*skill increases to level 10
+force_more_message += Your.*skill increases to level 15
+force_more_message += Your.*skill increases to level 20
+
+: if you.god() == "Xom" then
+force_more_message += god:
+: end
+
+force_more_message += ([Ff]iend|[Hh]ellion|[Tt]ormentor,[Ll]ich).*comes? into view
+force_more_message += (Agnes|Aizul|Arachne|Asmodeus|Antaeus|Azrael).*comes? into view
+force_more_message += (Blork|Boris|Cerebov).*comes? into view
+force_more_message += (Dispater|Dissolution|Donald|Dowan|Duvessa).*comes? into view
+force_more_message += (Edmund|Enchantress|Ereshkigal|Erica|Erolcha|Eustachio).*comes? into view
+force_more_message += (Fannar|Frances|Frederick).*comes? into view
+force_more_message += (Gastronok|Geryon|Grinder|Grum).*comes? into view
+force_more_message += (Harold|Ignacio|Ijyb|Ilsuiw).*comes? into view
+force_more_message += (Jorgrun|Jory|Joseph|Josephine).*comes? into view
+force_more_message += (Ribbit|Roka).*comes? into view
+force_more_message += (Khufu|Kirke).*comes? into view
+force_more_message += (Lamia|Leanaean|Lobon|Louise).*comes? into view
+force_more_message += (Mara|Margery|Maud|Maurice|Menkaure|Mennas|Mnoleg|Murray).*comes? into view
+force_more_message += (Nellie|Nergalle|Nessos|Nikola|Norris).*comes? into view
+force_more_message += (Pikel|Polyphemus|Psyche|Purgy).*comes? into view
+force_more_message += (royal jelly|Roxanne|Rupert).*comes? into view
+force_more_message += (Serpent of Hell|Sigmund|Sojobo|Sonja|Snorg).*comes? into view
+force_more_message += (Terence|Tiamat).*comes? into view
+force_more_message += (Urug|Vloq|Wiglaf|Xtahua|Yiuf).*comes? into view
+force_more_message += ([Hh]ydr|[Oo]klob).*comes? into view
+
+# rotting chunks are annoying
+runrest_ignore_message += in your inventory.*rotted away
