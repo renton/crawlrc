@@ -1,6 +1,6 @@
 # === autotravel ===
-travel_delay        = 2
 explore_delay       = -1
+travel_delay        = 1
 rest_delay          = -1
 rest_wait_both      = true
 show_travel_trail   = true
@@ -29,7 +29,13 @@ pickup_mode                 = multi
 drop_mode                   = multi
 restart_after_game          = true
 level_map_cursor_step       = 4
-hp_colour                   = 70:yellow, 50:red
+
+hp_colour = 100:green, 99:lightgray, 75:yellow, 50:lightred, 25:red
+mp_colour = 100:green, 99:lightgray, 75:yellow, 50:lightred, 25:red
+stat_colour -= 3:red
+status_caption_colour = brown
+enemy_hp_colour = green green brown brown magenta red lightgrey
+
 sort_menus                  = inv: true : equipped, identified, basename, qualname, charged
 note_monsters               += orb of fire, ancient lich, Sigmund
 detected_monster_colour     = lightred
@@ -122,4 +128,4 @@ force_more_message += (Urug|Vloq|Wiglaf|Xtahua|Yiuf).*comes? into view
 force_more_message += ([Hh]ydr|[Oo]klob).*comes? into view
 
 # rotting chunks are annoying
-runrest_ignore_message += in your inventory.*rotted away
+ignore += chunks of flesh in your inventory.*rotted away
